@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "city_name": "Delhi",
+      "traffic_congestion_score": 9,
+      "average_speed_on_major_routes": 18,
+      "weather_warnings": "Fog"
+    },
+    {
+      "city_name": "Bangalore",
+      "traffic_congestion_score": 6,
+      "average_speed_on_major_routes": 35,
+      "weather_warnings": null
+    }
+  ]
+}
