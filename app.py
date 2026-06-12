@@ -212,4 +212,3 @@ elif menu == "Arithmetic Operations":
         st.write("Multiplication:", x * y)
         st.write("Division:", x / y if y != 0 else "Undefined")
         st.write("Power:", x ** y)
-```
