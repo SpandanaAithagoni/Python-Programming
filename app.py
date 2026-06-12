@@ -1,11 +1,7 @@
-
+```python
 import streamlit as st
 
-st.set_page_config(
-    page_title="Python Mini Projects Dashboard",
-    page_icon="🐍",
-    layout="wide"
-)
+st.set_page_config(page_title="Python Mini Projects Dashboard", page_icon="🐍", layout="wide")
 
 st.title("🐍 Python Mini Projects Dashboard")
 
@@ -98,39 +94,30 @@ elif menu == "Greatest of Three Numbers":
     a = st.number_input("Number 1")
     b = st.number_input("Number 2")
     c = st.number_input("Number 3")
-
     if st.button("Find Greatest"):
         st.success(f"Greatest Number = {max(a,b,c)}")
 
 elif menu == "Swap Numbers":
     st.header("Swap Numbers")
-
     a = st.number_input("A")
     b = st.number_input("B")
-
     if st.button("Swap"):
         st.write("Before Swapping")
         st.write(f"A = {a}, B = {b}")
-
         a, b = b, a
-
         st.write("After Swapping")
         st.write(f"A = {a}, B = {b}")
 
 elif menu == "Student Details":
     st.header("Student Details")
-
     roll = st.number_input("Roll Number", step=1)
     name = st.text_input("Student Name")
-
     s1 = st.number_input("Subject 1")
     s2 = st.number_input("Subject 2")
     s3 = st.number_input("Subject 3")
-
     if st.button("Calculate Result"):
         total = s1 + s2 + s3
         avg = total / 3
-
         st.write("Name:", name)
         st.write("Roll Number:", roll)
         st.write("Total:", total)
@@ -138,30 +125,24 @@ elif menu == "Student Details":
 
 elif menu == "Simple Interest":
     st.header("Simple Interest Calculator")
-
     p = st.number_input("Principal Amount")
     t = st.number_input("Time")
     r = st.number_input("Rate")
-
     if st.button("Calculate SI"):
         si = (p * t * r) / 100
         total = p + si
-
         st.success(f"Simple Interest = {si}")
         st.success(f"Total Amount = {total}")
 
 elif menu == "Current Bill":
     st.header("Electricity Bill")
-
     cno = st.number_input("Consumer Number", step=1)
     cname = st.text_input("Consumer Name")
     pmr = st.number_input("Present Month Reading")
     lmr = st.number_input("Last Month Reading")
-
     if st.button("Generate Bill"):
         units = pmr - lmr
         bill = units * 3.80
-
         st.write("Consumer Number:", cno)
         st.write("Consumer Name:", cname)
         st.write("Units Consumed:", units)
@@ -169,82 +150,63 @@ elif menu == "Current Bill":
 
 elif menu == "Area and Perimeter":
     st.header("Area and Perimeter")
-
     r = st.number_input("Circle Radius")
     l = st.number_input("Rectangle Length")
     b = st.number_input("Rectangle Breadth")
-
     if st.button("Calculate"):
         pi = 3.14
-
         area_c = pi * r * r
         per_c = 2 * pi * r
-
         area_r = l * b
         per_r = 2 * (l + b)
-
         st.write("Rectangle Area:", area_r)
         st.write("Rectangle Perimeter:", per_r)
-
         st.write("Circle Area:", round(area_c, 2))
         st.write("Circle Perimeter:", round(per_c, 2))
 
 elif menu == "Volume Calculator":
     st.header("Volume Calculator")
-
     s = st.number_input("Cube Side")
     r = st.number_input("Cylinder Radius")
     h = st.number_input("Cylinder Height")
-
     if st.button("Calculate Volume"):
         cube = s ** 3
         cylinder = 3.14 * r * r * h
-
         st.write("Cube Volume:", cube)
         st.write("Cylinder Volume:", round(cylinder, 2))
 
 elif menu == "KM to Miles":
     st.header("KM to Miles")
-
     km = st.number_input("Kilometers")
-
     if st.button("Convert"):
         miles = km / 0.621
         st.success(f"Miles = {round(miles,2)}")
 
 elif menu == "Days to Years and Months":
     st.header("Days Converter")
-
     days = st.number_input("Enter Days")
-
     if st.button("Convert Days"):
         years = days / 365
         months = days / 30
-
         st.write("Years:", round(years, 2))
         st.write("Months:", round(months, 2))
 
 elif menu == "Addition Function":
     st.header("Addition Function")
-
     if st.button("Add 10 + 20"):
         st.success(10 + 20)
 
 elif menu == "Subtraction Function":
     st.header("Subtraction Function")
-
     a = st.number_input("A")
     b = st.number_input("B")
-
     if st.button("Subtract"):
         st.success(a - b)
 
 elif menu == "Arithmetic Operations":
     st.header("Arithmetic Operations")
-
     x = st.number_input("First Number", value=5)
     y = st.number_input("Second Number", value=2)
-
     if st.button("Calculate Operations"):
         st.write("Addition:", x + y)
         st.write("Subtraction:", x - y)
